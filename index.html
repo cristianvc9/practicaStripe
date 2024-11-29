@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Taladro DeWALT</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <link rel="stylesheet" href="css/indexStyle.css">
+   <!-- script de stripe -->
+   <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+</head>
+
+<body>
+   <nav class="navbar navbar-expand-lg navbar-dark gradient-custom">
+      <div class="container-fluid">
+         <a class="navbar-brand" href="#">ToolShop</a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars text-light"></i>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+               <li class="nav-item"><a class="nav-link" href="#home"><i class="fas fa-home"></i> Home</a></li>
+               <li class="nav-item"><a class="nav-link" href="#categories"><i class="fas fa-th-large"></i>
+                     Categorías</a></li>
+               <li class="nav-item"><a class="nav-link" href="#products"><i class="fas fa-tools"></i> Productos</a></li>
+               <li class="nav-item"><a class="nav-link" href="#offers"><i class="fas fa-tags"></i> Ofertas</a></li>
+               <li class="nav-item"><a class="nav-link" href="#profile"><i class="fas fa-user"></i> Mi Cuenta</a></li>
+               <li class="nav-item"><a class="nav-link" href="#cart"><i class="fas fa-shopping-cart"></i> Carrito <span
+                        class="badge bg-dark">0</span></a></li>
+            </ul>
+            <form class="d-flex ms-lg-3 mt-3 mt-lg-0">
+               <input type="search" class="form-control" placeholder="Buscar herramientas..." aria-label="Search">
+               <button class="btn btn-outline-light" type="button"><i class="fas fa-search"></i></button>
+            </form>
+         </div>
+      </div>
+   </nav>
+
+   <main class="container mt-5">
+      <div class="card-container">
+         <div class="card">
+            <div class="row">
+               <div class="col-md-6">
+                  <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                     <div class="carousel-inner">
+                        <div class="carousel-item active">
+                           <img src="images/2.png" class="d-block w-100" alt="Taladro frontal">
+                        </div>
+                        <div class="carousel-item">
+                           <img src="images/1.png" class="d-block w-100" alt="Taladro lateral">
+                        </div>
+                        <div class="carousel-item">
+                           <img src="images/3.png" class="d-block w-100" alt="Taladro con caja">
+                        </div>
+                     </div>
+                     <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                     </button>
+                     <button class="carousel-control-next" type="button" data-bs-target="#productCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                     </button>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <h1>Taladro DeWALT</h1>
+                  <p class="sub text-uppercase text-muted">Rotomartillo</p>
+                  <p class="price">$4,599.00 MXN</p>
+                  <p>Rotomartillo 20v Max Brushless 2 Baterías DCD796D2 DeWalt.</p>
+                  <span class="text-success fw-bold">En existencia</span>
+                  <div class="mt-3">
+                     <span class="me-2">Valoración:</span>
+                     <i class="fa fa-star text-warning"></i>
+                     <i class="fa fa-star text-warning"></i>
+                     <i class="fa fa-star text-warning"></i>
+                     <i class="fa fa-star text-warning"></i>
+                     <i class="fa fa-star text-muted"></i>
+                  </div>
+                  <div class="mt-4">
+                     <!-- BOTON DE STRIPE -->
+                     <stripe-buy-button buy-button-id="buy_btn_1QPwdrI2cuVW8G1z5oUu0ewp"
+                        publishable-key="pk_test_51OJGIQI2cuVW8G1zJt2t3Km1MDzH1tXazgbJS7qK89LRGKRsd05XHafrPn7GAd17u1hIEzsizRPeWe7Llqb7GTfI00wZYP6auK">
+                     </stripe-buy-button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </main>
+
+   <!-- Footer -->
+   <footer class="text-center text-lg-start bg-body-tertiary text-muted">
+      <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+         <div class="me-5 d-none d-lg-block">
+            <span>Contactanos en Nuestras Redes Sociales:</span>
+         </div>
+         <div>
+            <a href="#" class="me-4 text-reset"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="me-4 text-reset"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="me-4 text-reset"><i class="fab fa-google"></i></a>
+            <a href="#" class="me-4 text-reset"><i class="fab fa-instagram"></i></a>
+         </div>
+      </section>
+
+      <section class="container">
+         <div class="row">
+            <div class="col-md-4 col-12">
+               <h6 class="text-uppercase fw-bold">Nuestros Productos</h6>
+               <p><a href="#!" class="text-reset">Taladros</a></p>
+               <p><a href="#!" class="text-reset">Herramientas Manuales</a></p>
+               <p><a href="#!" class="text-reset">Accesorios</a></p>
+            </div>
+            <div class="col-md-4 col-12">
+               <h6 class="text-uppercase fw-bold">Información</h6>
+               <p><a href="#!" class="text-reset">Acerca de Nosotros</a></p>
+               <p><a href="#!" class="text-reset">Términos y Condiciones</a></p>
+               <p><a href="#!" class="text-reset">Política de Privacidad</a></p>
+            </div>
+            <div class="col-md-4 col-12">
+               <h6 class="text-uppercase fw-bold">Soporte</h6>
+               <p><a href="#!" class="text-reset">Centro de Ayuda</a></p>
+               <p><a href="#!" class="text-reset">Contactanos</a></p>
+            </div>
+         </div>
+      </section>
+   </footer>
+
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
